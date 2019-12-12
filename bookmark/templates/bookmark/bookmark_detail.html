@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}상세화면{% endblock %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {{ object.site_name }} <br>
+        {{ object.url }}
+
+    </form>
+{% endblock %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>상세화면</title>
+</head>
+<body>
+    {{ object.site_name }} <br>
+    {{ object.url }}
+
+
+</body>
+</html>
